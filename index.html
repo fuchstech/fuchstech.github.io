@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerem Yıldız</title>
+    <title>Ben Kimim?</title>
     <style>
-        /* Genel stil ayarları */
         body {
-            font-family: "Times New Roman", serif;
-            background-color: #f0f8ff; /* Beyaz dışındaki bir renk (ör. açık mavi) */
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
             margin: 20px;
         }
         .header {
@@ -24,20 +23,23 @@
         }
         .content {
             font-size: 14pt;
-            font-style: italic;
             text-align: left;
             margin: 20px;
         }
         .content ul {
-            list-style-type: disc; /* Maddeler için işaret */
-            margin-left: 1px;
+            list-style-type: none;
+            padding: 0;
         }
-        .profile-pic {
+        .content li {
+            margin-bottom: 20px;
+        }
+        iframe {
             display: block;
-            margin: 20px auto;
-            width: 200px; /* 512 piksel çözünürlük için ölçekli */
-            height: 256px;
-            border-radius: 50%; /* Profil resmi yuvarlak görünüm */
+            margin-top: 10px;
+            width: 300px;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -54,17 +56,30 @@
         Ben Kimim?
     </div>
 
-    <!-- Metin kısmı -->
+    <!-- İçerik -->
     <div class="content">
-        <p></p>
         <ul>
-            <li>Motorlu taşıtlarla uğraşmayı severim</li>
-            <li>Spor yapmayı severim</li>
-            <li>Robotikçiyim</li>
+            <li>
+                Motorlu taşıtlarla uğraşmayı severim:
+                <iframe 
+                    src="https://www.youtube.com/embed/8ZR6Uz8n-lo" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </li>
+            <li>
+                Spor yapmayı severim:
+                <iframe 
+                    src="https://www.youtube.com/embed/wAPwQIS5BEg" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </li>
         </ul>
     </div>
-
-    <!-- Profil resmi -->
-    <img src="https://raw.githubusercontent.com/fuchstech/fuchstech.github.io/main/girisim2.jpeg" alt="Profil Resmi" class="profile-pic">
 </body>
 </html>
