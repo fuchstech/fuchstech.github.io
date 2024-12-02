@@ -1,7 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #f0f8ff; /* Beyaz dışındaki bir renk (ör. açık mavi) */
+            margin: 20px;
+        }
+        .header {
+            text-align: right;
+            font-size: 12pt;
+        }
+        .title {
+            text-align: center;
+            font-size: 20pt;
+            font-weight: bold;
+            text-decoration: underline;
+            margin: 20px 0;
+        }
+        .content {
+            font-size: 14pt;
+            font-style: italic;
+            text-align: left;
+            margin: 20px;
+        }
+        .content ul {
+            list-style-type: disc; /* Maddeler için işaret */
+            margin-left: 40px;
+        }
+        .profile-pic {
+            display: block;
+            margin: 20px auto;
+            width: 128px; /* 512 piksel çözünürlük için ölçekli */
+            height: 128px;
+            border-radius: 50%; /* Profil resmi yuvarlak görünüm */
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Başlık kısmı -->
+    <div class="header">
+        <p>Ders Kodu: ENF100</p>
+        <p>Ad Soyad: Kerem Yıldız</p>
+        <p>Öğrenci No: 240114014023</p>
+    </div>
+
+    <!-- Ödev başlığı -->
+    <div class="title">
+        Ben Kimim?
+    </div>
+
+    <!-- Metin kısmı -->
+    <div class="content">
+        <p>Sizi tanımlayan metin:</p>
+        <ul>
+            <li>Çalışkan bir bireyim.</li>
+            <li>Teknolojiye ve yeniliğe büyük ilgi duyuyorum.</li>
+            <li>Hedeflerime ulaşmak için planlı çalışırım.</li>
+        </ul>
+    </div>
+
+    <!-- Profil resmi -->
+    <img src="https://raw.githubusercontent.com/fuchstech/fuchstech.github.io/main/girisim2.jpeg" alt="Profil Resmi" class="profile-pic">
 </body>
 </html>
