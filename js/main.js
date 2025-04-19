@@ -270,30 +270,111 @@ function setupProjectModals() {
                         </ul>
                     `;
                     break;
-                case 'submarine':
+                case 'mtrcbeta':
                     content = `
-                        <h2>Otonom Sualtı Aracı</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">Sualtı Aracı Görseli</div>
-                        <p>Teknofest ve RoboNation Robosub yarışmaları için geliştirilen otonom sualtı aracı projesi.</p>
+                        <h2>MTRC-Beta Sualtı Aracı</h2>
+                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">MTRC-Beta Görseli</div>
+                        <p>MTRC-Beta, Teknofest yarışması için Matiricie takımı tarafından geliştirilen gelişmiş otonom sualtı aracıdır.</p>
                         
                         <h3>Proje Detayları</h3>
                         <p>Bu projede kullanılan temel teknolojiler:</p>
                         <ul>
-                            <li>Robot Operating System (ROS)</li>
-                            <li>Görüntü işleme algoritmaları</li>
-                            <li>Sualtı sensör füzyonu</li>
-                            <li>Elektronik devre tasarımı</li>
-                            <li>Gömülü sistem programlama</li>
+                            <li>Robot Operating System (ROS) tabanlı kontrol yazılımı</li>
+                            <li>Gelişmiş görüntü işleme algoritmaları</li>
+                            <li>Sualtı sensör entegrasyonu</li>
+                            <li>Özel PCB tasarımı ve elektronik</li>
+                            <li>Algoritma optimizasyonu</li>
                         </ul>
                         
                         <h3>Benim Rolüm</h3>
-                        <p>Bu projede Elektronik ve Gömülü Sistem geliştirici olarak görev aldım. Sorumluluklarım:</p>
+                        <p>MTRC-Beta projesinde Yazılım Ekip Lideri olarak görev aldım. Sorumluluklarım:</p>
                         <ul>
-                            <li>ROS tabanlı kontrol sistemleri geliştirme</li>
-                            <li>Sensör entegrasyonu ve veri füzyonu</li>
-                            <li>Elektronik devre tasarımı ve üretimi</li>
-                            <li>Gömülü sistem yazılımı kodlama</li>
-                            <li>Navigasyon algoritmalarının oluşturulması</li>
+                            <li>ROS tabanlı kontrol sistemleri mimarisi</li>
+                            <li>Görüntü işleme algoritmalarının geliştirilmesi</li>
+                            <li>Kontrolör ayarlarının optimizasyonu</li>
+                            <li>Takım koordinasyonu</li>
+                            <li>Simülasyon ortamı geliştirme</li>
+                        </ul>
+                    `;
+                    break;
+                case 'mtrcalpha':
+                    content = `
+                        <h2>MTRC-Alpha Sualtı Aracı</h2>
+                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">MTRC-Alpha Görseli</div>
+                        <p>MTRC-Alpha, Matiricie takımının ilk otonom sualtı aracı projesidir.</p>
+                        
+                        <h3>Proje Detayları</h3>
+                        <p>Bu projede kullanılan temel teknolojiler:</p>
+                        <ul>
+                            <li>Arduino tabanlı kontrol sistemleri</li>
+                            <li>Python ile görüntü işleme</li>
+                            <li>OpenCV kütüphanesi</li>
+                            <li>Motor kontrol sistemleri</li>
+                            <li>Temel mekanik tasarım</li>
+                        </ul>
+                        
+                        <h3>Benim Rolüm</h3>
+                        <p>MTRC-Alpha projesinde Elektronik ve Yazılım Geliştiricisi olarak görev aldım. Sorumluluklarım:</p>
+                        <ul>
+                            <li>Arduino programlama</li>
+                            <li>Sensör entegrasyonu</li>
+                            <li>Python ile basit görüntü işleme</li>
+                            <li>Elektronik devre tasarımı</li>
+                            <li>Gömülü sistem mimarisi</li>
+                        </ul>
+                    `;
+                    break;
+                case 'poseidon':
+                    content = `
+                        <h2>Poseidon Sualtı Aracı</h2>
+                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">Poseidon Görseli</div>
+                        <p>Poseidon, RoboNation Robosub yarışması için geliştirilen uluslararası rekabet düzeyinde sualtı aracı projesidir.</p>
+                        
+                        <h3>Proje Detayları</h3>
+                        <p>Bu projede kullanılan temel teknolojiler:</p>
+                        <ul>
+                            <li>ROS (Robot Operating System)</li>
+                            <li>Yapay Zeka tabanlı nesne tanıma</li>
+                            <li>Sensör füzyonu</li>
+                            <li>3D modelleme ve simülasyon</li>
+                            <li>Görev planlama algoritmaları</li>
+                        </ul>
+                        
+                        <h3>Benim Rolüm</h3>
+                        <p>Poseidon projesinde Yazılım Geliştiricisi olarak görev aldım. Sorumluluklarım:</p>
+                        <ul>
+                            <li>ROS paketleri geliştirme</li>
+                            <li>Yapay zeka algoritmaları entegrasyonu</li>
+                            <li>Gömülü sistem kontrolü</li>
+                            <li>Simülasyon ortamında test</li>
+                            <li>Görev planlayıcı algoritmalar</li>
+                        </ul>
+                    `;
+                    break;
+                case 'maikong':
+                    content = `
+                        <h2>Maikong Sualtı Aracı</h2>
+                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">Maikong Görseli</div>
+                        <p>Maikong, denizaltı haritalandırma ve keşif için geliştirilen özel bir sualtı robotik platform projesidir.</p>
+                        
+                        <h3>Proje Detayları</h3>
+                        <p>Bu projede kullanılan temel teknolojiler:</p>
+                        <ul>
+                            <li>SLAM (Eşzamanlı Haritalandırma ve Konumlandırma)</li>
+                            <li>Lidar ve Sonar sensör entegrasyonu</li>
+                            <li>GPS destekli navigasyon</li>
+                            <li>Veri kaydı ve analizi</li>
+                            <li>Gelişmiş haritalandırma algoritması</li>
+                        </ul>
+                        
+                        <h3>Benim Rolüm</h3>
+                        <p>Maikong projesinde Robotik Yazılım Mühendisi olarak görev aldım. Sorumluluklarım:</p>
+                        <ul>
+                            <li>SLAM algoritmalarının geliştirilmesi</li>
+                            <li>Lidar ve sonar verilerinin işlenmesi</li>
+                            <li>Haritalandırma yöntemlerinin iyileştirilmesi</li>
+                            <li>3D harita oluşturma</li>
+                            <li>Otonom navigasyon algoritmaları</li>
                         </ul>
                     `;
                     break;
