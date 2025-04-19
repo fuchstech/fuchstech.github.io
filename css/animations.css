@@ -1,0 +1,318 @@
+/* Animasyon Stilleri */
+
+/* Temel geçiş animasyonları */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeDown 0.8s forwards;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeLeft 0.8s forwards;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeRight 0.8s forwards;
+}
+
+/* 3D kart efekti için animasyon */
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/* Yana kayma animasyonu */
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 0.8s forwards;
+}
+
+/* Pulsasyon (nabız) animasyonu */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Dönme animasyonu */
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Sallanma animasyonu */
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Ölçeklendirme animasyonları */
+.scale-up {
+    transform: scale(0);
+    animation: scaleUp 0.5s forwards;
+}
+
+.scale-down {
+    transform: scale(1.5);
+    animation: scaleDown 0.5s forwards;
+}
+
+/* Arka plan animasyonu için */
+.bg-shift {
+    background-size: 200% 200%;
+    animation: bg-shift 10s ease infinite;
+    background-image: linear-gradient(45deg, var(--primary-color) 0%, #4a90e2 50%, var(--primary-color) 100%);
+}
+
+/* Proje kartlarında ışıldama animasyonu */
+.shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: shimmer 2s infinite;
+}
+
+/* Animasyon tanımlamaları */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from { 
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes scaleDown {
+    from { transform: scale(1.5); }
+    to { transform: scale(1); }
+}
+
+@keyframes bg-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Özel 3D kart animasyonu */
+.card-hover-effect {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-hover-effect:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ziyaret edilen bağlantılar için animasyon */
+.link-hover {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s;
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
+
+/* Beceri çubukları animasyonu */
+.animate-skill-bars .skill-level {
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Zaman çizelgesi noktaları için animasyon */
+.timeline-animate .timeline-dot {
+    transform: scale(0);
+    animation: growDot 0.5s forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes growDot {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* Modal açılış animasyonu */
+.modal-fade-in {
+    animation: modalFadeIn 0.3s forwards;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SVG / İkon animasyonları */
+.icon-pop {
+    animation: iconPop 0.5s forwards;
+}
+
+@keyframes iconPop {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Yazılım kodunun yazıldığını gösteren animasyon */
+.typing-code {
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--primary-color);
+    animation: typing 3s steps(40) forwards, blink-caret .75s step-end infinite;
+}
+
+/* Sayfa geçiş animasyonları */
+.page-transition {
+    animation: pageFadeIn 1s;
+}
+
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Kayan şerit animasyonu */
+.running-text {
+    white-space: nowrap;
+    animation: textScroll 20s linear infinite;
+}
+
+@keyframes textScroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* Buton hover animasyonu */
+.btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.btn-hover-effect:hover::before {
+    left: 100%;
+}
