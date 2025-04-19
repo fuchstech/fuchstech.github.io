@@ -1,4 +1,276 @@
-/* Sertifikalar Bölümü */
+/* Mobil görünüm iyileştirmeleri - Form Elemanları */
+@media (max-width: 768px) {
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 14px 16px; /* Daha büyük dokunmatik alanlar */
+        font-size: 16px; /* iOS'ta otomatik yakınlaştırmayı önlemek için */
+    }
+    
+    .contact-form .btn-primary {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    
+    .contact-card {
+        padding: 20px;
+    }
+    
+    .contact-card i {
+        font-size: 2.5rem;
+    }
+}/* Mobil cihazlar için dokunmatik iyileştirmeleri */
+@media (max-width: 768px) {
+    .nav-links a, .btn, .view-button, .social-link, .filter-btn {
+        padding: 12px 20px; /* Dokunmatik hedef boyutu artışı */
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+    
+    .timeline-dot {
+        width: 24px; /* Daha büyük dokunmatik hedef */
+        height: 24px;
+        left: -32px !important;
+    }
+    
+    .project-filters {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 15px;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 2rem;
+    }
+    
+    .project-filters::-webkit-scrollbar {
+        height: 3px;
+    }
+    
+    .project-filters::-webkit-scrollbar-thumb {
+        background-color: var(--border-color);
+        border-radius: 10px;
+    }
+    
+    .project-filters button {
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
+}/* Haberler bölümü */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.news-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.news-date {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+}
+
+.news-date .day {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.news-date .month,
+.news-date .year {
+    font-size: 0.9rem;
+}
+
+.news-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.news-excerpt {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.news-read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.news-read-more i {
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.news-read-more:hover {
+    color: #0d5bbc;
+}
+
+.news-read-more:hover i {
+    transform: translateX(3px);
+}
+
+.news-all-link {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card {
+        flex-direction: column;
+    }
+    
+    .news-date {
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .news-date .day,
+    .news-date .month,
+    .news-date .year {
+        font-size: 1rem;
+    }
+}/* Orta boyutlu ekranlar için iyileştirmeler */
+@media screen and (max-width: 992px) and (min-width: 481px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.7rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .project-card, .award-card, .certificate-card {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+    }
+}/* Genel Responsive İyileştirmeleri */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}/* Tema Değiştirici */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* 30px'den 40px'e çıkarıldı */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 56px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--text-gray);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+}
+
+.slider .fa-sun {
+    color: #f6e05e;
+    font-size: 14px;
+}
+
+.slider .fa-moon {
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+    z-index: 1;
+}
+
+input:checked + .slider {
+    background-color: var(--text-gray);
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}/* Mobil Optimizasyonu */
+body {
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: background-color var(--transition), color var(--transition);
+    overflow-x: hidden; /* Yatay kaydırmayı engelleme */
+}
 .certificates {
     background-color: var(--background-light);
 }
@@ -101,7 +373,7 @@
     /* Ana Renkler */
     --primary-color: #1a73e8;
     --secondary-color: #ff5252;
-    --background-light: #f5f7fa;
+    --background-light: #f0f2f5; /* Gri arkaplan kalsin */
     --background-dark: #121212;
     --text-dark: #333333;
     --text-light: #e0e0e0;
@@ -117,7 +389,25 @@
     --z-scroll-top: 900;
 }
 
+/* Karanlık Mod */
+[data-theme="dark"] {
+    --primary-color: #5ea4fc;
+    --secondary-color: #ff7b7b;
+    --background-light: #1e1e1e;
+    --background-dark: #121212;
+    --text-dark: #f0f0f0;
+    --text-light: #ffffff;
+    --text-gray: #bbbbbb;
+    --border-color: #333333;
+}
+
 /* Genel Stiller */
+body {
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: background-color var(--transition), color var(--transition);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -215,6 +505,7 @@ section {
 .navbar {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav-links {
@@ -250,6 +541,77 @@ section {
 
 .nav-links a:hover::after, .nav-links a.active::after {
     width: 100%;
+}
+
+/* Tema Değiştirici */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 56px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--text-gray);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+}
+
+.slider .fa-sun {
+    color: #f6e05e;
+    font-size: 14px;
+}
+
+.slider .fa-moon {
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+    z-index: 1;
+}
+
+input:checked + .slider {
+    background-color: var(--text-gray);
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .mobile-menu-btn {
@@ -1206,5 +1568,135 @@ section {
     
     .certificate-card {
         padding-left: 2rem;
+    }
+    
+    /* Tema switch'i için düzenleme */
+    .theme-switch-wrapper {
+        position: absolute;
+        right: 60px;
+        top: 23px;
+    }
+}
+
+/* Karanlık Mod Stilleri */
+[data-theme="dark"] .header {
+    background-color: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .header.scrolled {
+    background-color: var(--background-dark);
+}
+
+[data-theme="dark"] .certificate-card,
+[data-theme="dark"] .award-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .contact-form-container,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .news-card {
+    background-color: var(--background-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hero::before {
+    background-color: rgba(18, 18, 18, 0.7);
+}
+
+[data-theme="dark"] .about,
+[data-theme="dark"] .projects,
+[data-theme="dark"] .awards {
+    background-color: var(--background-dark);
+}
+
+[data-theme="dark"] .skills,
+[data-theme="dark"] .experience,
+[data-theme="dark"] .certificates,
+[data-theme="dark"] .contact {
+    background-color: #1e1e1e; /* Biraz daha açık bir ton */
+}
+
+[data-theme="dark"] .tech-tag {
+    background-color: #333333;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .mobile-menu-btn .bar {
+    background-color: var(--text-light);
+}
+
+[data-theme="dark"] .nav-links.active {
+    background-color: var(--background-dark);
+}
+
+[data-theme="dark"] .filter-btn {
+    background-color: #333333;
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .timeline-dot {
+    border-color: var(--background-dark);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .social-link {
+    background-color: var(--background-dark);
+}
+
+/* Mobil görünüm iyileştirmeleri */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Daha küçük ekranlara uygun başlık boyutu */
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .code-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+    }
+    
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
