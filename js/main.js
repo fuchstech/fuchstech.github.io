@@ -198,7 +198,9 @@ function setupProjectModals() {
                 case 'asifin':
                     content = `
                         <h2>AsiFin - Finansal Strateji Platformu</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">AsiFin Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/girisim2.jpeg" alt="AsiFin Projesi" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>AsiFin, finansal stratejilerin test edilmesini sağlayan web tabanlı bir SaaS girişimidir. Teknofest Deneyap Girişim Programı'nda "En İyi Girişim" ödülünü kazanmıştır.</p>
                         
                         <h3>Proje Detayları</h3>
@@ -223,7 +225,9 @@ function setupProjectModals() {
                 case 'sorucan':
                     content = `
                         <h2>SoruCan - LLM Projesi</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">SoruCan Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/sorucan.jpg" alt="SoruCan Projesi" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>SoruCan, Büyük Dil Modeli kullanan akıllı bir soru-cevap platformudur. GSB - Uluslarası Gençlik Bilgilendirme Servisi Hackathonu'nda birincilik ödülü kazanmıştır.</p>
                         
                         <h3>Proje Detayları</h3>
@@ -248,7 +252,9 @@ function setupProjectModals() {
                 case 'asimed':
                     content = `
                         <h2>Asimed - Sağlık Teknolojisi Çözümü</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">Asimed Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/asimed.jpg" alt="Asimed Projesi" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>Asimed, yapay zeka destekli ön teşhis, online anamnez, doktor destek ekranları ve tedavi takibini birleştiren yenilikçi bir sağlık teknolojisi çözümüdür. Bulutklinik 23' Hackathon'unda birincilik ödülü kazanmıştır.</p>
                         
                         <h3>Proje Detayları</h3>
@@ -273,7 +279,9 @@ function setupProjectModals() {
                 case 'mtrcbeta':
                     content = `
                         <h2>MTRC-Beta Sualtı Aracı</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">MTRC-Beta Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/mtrc-beta.jpg" alt="MTRC-Beta Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>MTRC-Beta, Teknofest yarışması için Matiricie takımı tarafından geliştirilen gelişmiş otonom sualtı aracıdır.</p>
                         
                         <h3>Proje Detayları</h3>
@@ -300,7 +308,9 @@ function setupProjectModals() {
                 case 'mtrcalpha':
                     content = `
                         <h2>MTRC-Alpha Sualtı Aracı</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">MTRC-Alpha Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/mtrc-alpha.jpg" alt="MTRC-Alpha Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>MTRC-Alpha, Matiricie takımının ilk otonom sualtı aracı projesidir.</p>
                         
                         <h3>Proje Detayları</h3>
@@ -327,7 +337,9 @@ function setupProjectModals() {
                 case 'poseidon':
                     content = `
                         <h2>Poseidon Sualtı Aracı</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">Poseidon Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/poseidon.jpg" alt="Poseidon Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>Poseidon, RoboNation Robosub yarışması için geliştirilen uluslararası rekabet düzeyinde sualtı aracı projesidir.</p>
                         
                         <h3>Proje Detayları</h3>
@@ -354,7 +366,9 @@ function setupProjectModals() {
                 case 'maikong':
                     content = `
                         <h2>Maikong Sualtı Aracı</h2>
-                        <div class="modal-image" style="background-color: #1a73e8; height: 200px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; margin-bottom: 20px;">Maikong Görseli</div>
+                        <div class="modal-image">
+                            <img src="assets/images/maikong.jpg" alt="Maikong Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
                         <p>Maikong, denizaltı haritalandırma ve keşif için geliştirilen özel bir sualtı robotik platform projesidir.</p>
                         
                         <h3>Proje Detayları</h3>

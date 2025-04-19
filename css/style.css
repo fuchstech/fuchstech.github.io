@@ -1,5 +1,20 @@
 /* Ana Stil Dosyası */
 
+/* Modal görsel stili */
+.modal-image {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 :root {
     /* Ana Renkler */
     --primary-color: #1a73e8;
@@ -461,26 +476,22 @@ section {
 }
 
 .project-image {
-    height: 160px;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
+    height: 200px;
     position: relative;
     overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.project-image::before {
-    content: '';
-    position: absolute;
-    width: 150%;
+.project-image img {
+    width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
-    transform: translateX(-100%);
-    animation: shimmer 3s infinite;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
 }
 
 @keyframes shimmer {
