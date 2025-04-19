@@ -75,14 +75,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Form gönderimi Formspree tarafından işlenecek,
+            // bu nedenle burada form gönderimini engellemiyoruz
+            // Formspree başarılı/başarısız sayfaya yönlendirecek
             
-            // Formspree veya başka bir form gönderim servisi için burada POST isteği eklenebilir
-            // Şimdilik basit bir alert gösterelim
-            alert('Mesajınız için teşekkürler! Bu demo sürümünde form gönderimi simüle edilmektedir.');
-            
-            // Formu sıfırla
-            this.reset();
+            // Form gönderiminden sonra sayfa değiştirmeden önce 'Gönderiliyor...' mesajı göster
+            const submitButton = this.querySelector('button[type="submit"]');
+            if (submitButton) {
+                const originalText = submitButton.innerText;
+                submitButton.innerText = 'Gönderiliyor...';
+                submitButton.disabled = true;
+                
+                // 3 saniye sonra butonu sıfırla (form gönderimini engellemeyeceğiz)
+                setTimeout(() => {
+                    submitButton.innerText = originalText;
+                    submitButton.disabled = false;
+                }, 3000);
+            }
         });
     }
 
