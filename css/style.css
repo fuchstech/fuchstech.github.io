@@ -1189,3 +1189,22 @@ section {
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 992px) {
+    /* Diğer media query kuralları zaten mevcut */
+    
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Diğer media query kuralları zaten mevcut */
+    
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificate-card {
+        padding-left: 2rem;
+    }
+}
