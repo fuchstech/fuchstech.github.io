@@ -1,4 +1,101 @@
-/* Ana Stil Dosyası */
+/* Sertifikalar Bölümü */
+.certificates {
+    background-color: var(--background-light);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.certificate-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.certificate-card:hover::before {
+    width: 8px;
+}
+
+.certificate-icon {
+    margin-right: 1rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.certificate-content {
+    flex: 1;
+}
+
+.certificate-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.certificate-details {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 0.8rem;
+}
+
+.certificate-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.certificate-link:hover {
+    color: #0d5bbc;
+    text-decoration: underline;
+}
+
+.certificate-link i {
+    margin-right: 0.3rem;
+}
+
+@media screen and (max-width: 992px) {
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+}/* Ana Stil Dosyası */
 
 :root {
     /* Ana Renkler */
