@@ -351,6 +351,65 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+/* Mobil cihazlar için (yatay ve dikey mod) */
+@media (max-width: 768px) and (orientation: portrait) {
+    /* Dikey mod için iyileştirmeler */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .hero-content {
+        padding-top: 20px;
+    }
+    
+    .code-container {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    /* Yatay mod için iyileştirmeler */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 0;
+    }
+    
+    .hero .container {
+        flex-direction: row !important;
+    }
+    
+    .hero-content {
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .code-container {
+        transform: scale(0.8);
+        margin-left: -20px;
+    }
+    
+    /* Navbar yatay modda daha küçük olmalı */
+    .header {
+        padding: 0.5rem 0;
+    }
+    
+    /* Yatay modda nav-links'ler için scroll */
+    .nav-links.active {
+        max-height: 70vh;
+    }
 }/* Tema Değiştirici */
 .theme-switch-wrapper {
     display: flex;
