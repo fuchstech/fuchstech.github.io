@@ -36,5 +36,5 @@
   
   <!-- Title -->
   <text x="400" y="430" font-family="Arial, sans-serif" font-size="36" fill="#FFF" text-anchor="middle">BMW 3.20D Fiyat Tahmin Modeli</text>
-  <text x="400" y="470" font-family="Arial, sans-serif" font-size="24" fill="#B3E5FC" text-anchor="middle">Borusan Autohack 3.lük</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="24" fill="#B3E5FC" text-anchor="middle">Borusan AutoHack</text>
 </svg>
