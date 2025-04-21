@@ -7,6 +7,133 @@
         padding: 14px 16px; /* Daha büyük dokunmatik alanlar */
         font-size: 16px; /* iOS'ta otomatik yakınlaştırmayı önlemek için */
     }
+
+/* Blog Bölümü */
+.blog {
+    background-color: var(--background-light);
+}
+
+.blog-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+.blog-posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.blog-meta i {
+    margin-right: 0.3rem;
+}
+
+.blog-excerpt {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.read-more i {
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.read-more:hover {
+    color: #2d3748;
+}
+
+.read-more:hover i {
+    transform: translateX(3px);
+}
+
+.blog-button-container {
+    text-align: center;
+}
+
+/* Blog için Mobil Görünüm İyileştirmeleri */
+@media (max-width: 768px) {
+    .blog-posts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Blog için Karanlık Mod Stilleri */
+[data-theme="dark"] .blog-post {
+    background-color: var(--background-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .blog {
+    background-color: #1e1e1e;
+}
     
     .contact-form .btn-primary {
         width: 100%;
