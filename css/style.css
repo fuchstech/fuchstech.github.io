@@ -66,117 +66,9 @@
         flex: 0 0 auto;
         margin-right: 10px;
     }
-    
-    /* Haber kartları iyileştirmesi */
-    .news-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .news-card {
-        flex-direction: column;
-    }
-    
-    .news-date {
-        flex-direction: row;
-        padding: 1rem;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .news-date .day,
-    .news-date .month,
-    .news-date .year {
-        font-size: 1rem;
-    }
 }
 
-/* Haberler bölümü */
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
 
-.news-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.news-date {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 70px;
-}
-
-.news-date .day {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.news-date .month,
-.news-date .year {
-    font-size: 0.9rem;
-}
-
-.news-content {
-    padding: 1.5rem;
-    flex: 1;
-}
-
-.news-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.news-excerpt {
-    color: var(--text-gray);
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.news-read-more {
-    color: var(--primary-color);
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.news-read-more i {
-    margin-left: 0.5rem;
-    transition: var(--transition);
-}
-
-.news-read-more:hover {
-    color: #0d5bbc;
-}
-
-.news-read-more:hover i {
-    transform: translateX(3px);
-}
-
-.news-all-link {
-    text-align: center;
-}
 
 /* Orta boyutlu ekranlar için iyileştirmeler */
 @media screen and (max-width: 992px) and (min-width: 481px) {
@@ -1600,8 +1492,7 @@ input:checked + .slider:before {
 [data-theme="dark"] .timeline-content,
 [data-theme="dark"] .contact-card,
 [data-theme="dark"] .contact-form-container,
-[data-theme="dark"] .modal-content,
-[data-theme="dark"] .news-card {
+[data-theme="dark"] .modal-content {
     background-color: var(--background-dark);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
