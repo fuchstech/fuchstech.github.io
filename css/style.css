@@ -40,9 +40,9 @@
 }
 
 .blog-post {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -313,9 +313,9 @@ body {
 }
 
 .certificate-card {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     padding: 1.5rem;
     display: flex;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1159,10 +1159,10 @@ input:checked + .slider:before {
 }
 
 .timeline-content {
-    background-color: white;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
 }
 
@@ -1334,10 +1334,10 @@ input:checked + .slider:before {
 }
 
 .contact-form-container {
-    background-color: white;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 
 .contact-form {
@@ -1392,7 +1392,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 50%;
     color: var(--primary-color);
     font-size: 1.5rem;
