@@ -429,7 +429,7 @@ function setupProjectModals() {
                         <div class="modal-image">
                             <img src="assets/images/borusan.jpg" alt="BMW 3.20D Fiyat Tahmin Modeli" style="width:100%; height:200px; object-fit:cover;">
                         </div>
-                        <p>Borusan Autohack yarışmasında Üçüncü olan bu projede, Sahibinden.com üzerinden topladığımız BMW 3.20D comfort paket ilanlarından aldığımız veriler ile hazırladığımız dataset üzerinden bir model eğittik.</p>
+                        <p>Borusan AutoHack yarışmasında Üçüncü olan bu projede, Sahibinden.com üzerinden topladığımız BMW 3.20D comfort paket ilanlarından aldığımız veriler ile hazırladığımız dataset üzerinden bir model eğittik.</p>
                         
                         <h3>Proje Detayları</h3>
                         <p>Bu projede kullanılan temel teknolojiler ve yöntemler:</p>
