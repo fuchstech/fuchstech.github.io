@@ -347,6 +347,40 @@
         margin-right: auto;
         max-width: 450px;
     }
+}
+
+/* Tıklanabilir öğeler için dokunmatik iyileştirmeleri */
+@media (max-width: 768px) {
+    /* Daha büyük dokunmatik hedefler */
+    .btn, 
+    .view-button, 
+    .social-link, 
+    .filter-btn,
+    .certificate-link,
+    .read-more,
+    .close-modal {
+        min-height: 44px; /* Apple'in önerdiği minimum dokunmatik hedef boyutu */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Dokunmatik hedefler arasındaki mesafeler */
+    .social-links {
+        gap: 15px;
+    }
+    
+    .tech-tags {
+        gap: 8px;
+    }
+    
+    /* Input ve form elemanları için daha iyi dokunmatik alanlar */
+    input, 
+    textarea, 
+    button, 
+    select {
+        font-size: 16px; /* iOS'ta otomatik yaklaştırmayı engeller */
+    }
 }/* Genel Responsive İyileştirmeleri */
 html, body {
     max-width: 100%;
