@@ -283,7 +283,7 @@ function setupProjectModals() {
                     content = `
                         <h2>Asimed - Sağlık Teknolojisi Çözümü</h2>
                         <div class="modal-image">
-                            <img src="assets/images/asimed.jpg" alt="Asimed Projesi" style="width:100%; height:200px; object-fit:cover;">
+                            <img src="assets/images/asimed.png" alt="Asimed Projesi" style="width:100%; height:200px; object-fit:cover;">
                         </div>
                         <p>Asimed, yapay zeka destekli ön teşhis, online anamnez, doktor destek ekranları ve tedavi takibini birleştiren yenilikçi bir sağlık teknolojisi çözümüdür. Bulutklinik 23' Hackathon'unda birincilik ödülü kazanmıştır.</p>
                         
