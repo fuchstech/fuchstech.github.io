@@ -879,7 +879,7 @@ input:checked + .slider:before {
 
 /* Hero Bölümü */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -908,7 +908,9 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    padding: 20px;
 }
 
 .hero-content {
@@ -946,6 +948,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .code-container {
@@ -954,7 +957,8 @@ input:checked + .slider:before {
     padding: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     max-width: 500px;
-    overflow: hidden;
+    width: 100%;
+    overflow: auto;
 }
 
 .code-container pre {
