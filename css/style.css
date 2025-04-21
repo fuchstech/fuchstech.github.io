@@ -402,14 +402,14 @@ body {
 
 :root {
     /* Ana Renkler */
-    --primary-color: #1a73e8;
-    --secondary-color: #ff5252;
-    --background-light: #f0f2f5; /* Gri arkaplan kalsin */
+    --primary-color: #2f8af5;
+    --secondary-color: #ff6b6b;
+    --background-light: #f8fafc; /* Daha açık arka plan */
     --background-dark: #121212;
-    --text-dark: #333333;
-    --text-light: #e0e0e0;
-    --text-gray: #767676;
-    --border-color: #ddd;
+    --text-dark: #1a1f36;
+    --text-light: #f2f4f7;
+    --text-gray: #6b7280;
+    --border-color: #e5e7eb;
     
     /* Geçiş Süresi */
     --transition: 0.3s ease-in-out;
@@ -509,15 +509,15 @@ section {
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: var(--z-navbar);
     transition: var(--transition);
 }
 
 .header.scrolled {
     padding: 0.7rem 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 .header .container {
@@ -680,7 +680,7 @@ input:checked + .slider:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 247, 250, 0.45); /* Daha az saydam arka plan overlay */
+    background-color: rgba(255, 255, 255, 0.75); /* Daha açık ve daha fazla saydam arka plan overlay */
     z-index: 1;
 }
 
@@ -764,7 +764,7 @@ input:checked + .slider:before {
 
 /* Hakkımda Bölümü */
 .about {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .about-content {
@@ -875,7 +875,7 @@ input:checked + .slider:before {
 
 .skill-bar {
     height: 10px;
-    background-color: #e0e0e0;
+    background-color: #f3f4f6;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -904,7 +904,7 @@ input:checked + .slider:before {
 
 /* Projeler Bölümü */
 .projects {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .project-filters {
@@ -919,7 +919,7 @@ input:checked + .slider:before {
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
     font-weight: 500;
-    background-color: #f0f0f0;
+    background-color: #f9fafb;
     color: var(--text-dark);
     transition: var(--transition);
 }
@@ -939,8 +939,8 @@ input:checked + .slider:before {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
     transition: var(--transition);
     transform-style: preserve-3d;
 }
@@ -999,7 +999,7 @@ input:checked + .slider:before {
 }
 
 .tech-tag {
-    background: #e9f0fd;
+    background: #eff6ff;
     color: var(--primary-color);
     padding: 0.3rem 0.8rem;
     border-radius: 30px;
@@ -1195,7 +1195,7 @@ input:checked + .slider:before {
 
 /* Ödüller ve Başarılar Bölümü */
 .awards {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .awards-grid {
@@ -1205,9 +1205,9 @@ input:checked + .slider:before {
 }
 
 .award-card {
-    background-color: #f9f9f9;
+    background-color: #fefefe;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -1304,10 +1304,10 @@ input:checked + .slider:before {
 }
 
 .contact-card {
-    background-color: white;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: var(--transition);
     text-align: center;
 }
