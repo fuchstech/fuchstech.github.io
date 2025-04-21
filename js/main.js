@@ -277,7 +277,7 @@ function setupProjectModals() {
                     content = `
                         <h2>SoruCan - LLM Projesi</h2>
                         <div class="modal-image">
-                            <img src="assets/images/sorucan.jpg" alt="SoruCan Projesi" style="width:100%; height:200px; object-fit:cover;">
+                            <img src="assets/images/Uluslararası Gençlik Zirvesi.jpg" alt="SoruCan Projesi" style="width:100%; height:200px; object-fit:cover;">
                         </div>
                         <p>SoruCan, Büyük Dil Modeli kullanan akıllı bir soru-cevap platformudur. GSB - Uluslarası Gençlik Bilgilendirme Servisi Hackathonu'nda birincilik ödülü kazanmıştır.</p>
                         
@@ -331,7 +331,7 @@ function setupProjectModals() {
                     content = `
                         <h2>MTRC-Beta Sualtı Aracı</h2>
                         <div class="modal-image">
-                            <img src="assets/images/mtrc-beta.jpg" alt="MTRC-Beta Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
+                            <img src="assets/images/beta.jpg" alt="MTRC-Beta Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
                         </div>
                         <p>MTRC-Beta, Teknofest yarışması için Matiricie takımı tarafından geliştirilen gelişmiş otonom sualtı aracıdır.</p>
                         
@@ -360,7 +360,7 @@ function setupProjectModals() {
                     content = `
                         <h2>MTRC-Alpha Sualtı Aracı</h2>
                         <div class="modal-image">
-                            <img src="assets/images/mtrc-alpha.jpg" alt="MTRC-Alpha Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
+                            <img src="assets/images/alpha.jpg" alt="MTRC-Alpha Sualtı Aracı" style="width:100%; height:200px; object-fit:cover;">
                         </div>
                         <p>MTRC-Alpha, Matiricie takımının ilk otonom sualtı aracı projesidir.</p>
                         
