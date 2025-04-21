@@ -7,6 +7,84 @@
         padding: 14px 16px; /* Daha büyük dokunmatik alanlar */
         font-size: 16px; /* iOS'ta otomatik yakınlaştırmayı önlemek için */
     }
+    
+    /* Navigasyon */
+    .header .container {
+        padding: 0 15px;
+    }
+    
+    .logo a {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        background-color: var(--background-light);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        z-index: 999;
+    }
+    
+    [data-theme="dark"] .nav-links {
+        background-color: var(--background-dark);
+    }
+    
+    .nav-links.active {
+        max-height: 400px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Hero bölümü iyileştirmeleri */
+    .hero .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .code-container {
+        max-width: 100%;
+        margin: 20px 0;
+        font-size: 12px;
+    }
+    
+    /* Proje kartları iyileştirmeleri */
+    .project-card {
+        max-width: 100%;
+    }
+    
+    .award-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .project-content {
+        padding: 1rem;
+    }
+    
+    .tech-tags {
+        flex-wrap: wrap;
+    }
 
 /* Blog için Karanlık Mod Stilleri */
 [data-theme="dark"] .blog-post {
@@ -198,6 +276,53 @@
     .project-filters button {
         flex: 0 0 auto;
         margin-right: 10px;
+    }
+    
+    /* Modal iyileştirmeleri */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 30px auto;
+    }
+    
+    /* Sertifikalar için iyileştirmeler */
+    .certificate-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .certificate-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* İletişim formu iyileştirmeleri */
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    /* Scroll to top button pozisyonu */
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Hakkımda bölümü iyileştirmeleri */
+    .about-image {
+        margin-bottom: 2rem;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-details {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
@@ -1533,11 +1658,14 @@ input:checked + .slider:before {
         background-color: white;
         flex-direction: column;
         align-items: center;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transform: translateY(-150%);
         transition: var(--transition);
         z-index: 999;
+        height: auto;
+        max-height: 80vh;
+        overflow-y: auto;
     }
     
     .nav-links.active {
@@ -1545,11 +1673,20 @@ input:checked + .slider:before {
     }
     
     .nav-links li {
-        margin: 1rem 0;
+        margin: 0.8rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
     }
     
     .mobile-menu-btn {
         display: flex;
+        z-index: 1001;
     }
     
     .mobile-menu-btn.active .bar:nth-child(1) {
@@ -1580,6 +1717,38 @@ input:checked + .slider:before {
     
     .awards-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Section padding iyileştirmeleri */
+    section {
+        padding: 3rem 0;
+    }
+    
+    /* Hero section alignment */
+    .hero-graphic {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    /* Proje kartları hizalaması */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .project-card {
+        max-width: 350px;
+    }
+    
+    /* İletişim bölümü düzenlemesi */
+    .contact-content {
+        gap: 2rem;
+    }
+    
+    /* Modal kapatma düğmesi */
+    .close-modal {
+        font-size: 1.8rem;
+        padding: 5px;
     }
 }
 @media screen and (max-width: 992px) {
@@ -1806,38 +1975,46 @@ input:checked + .slider:before {
 /* Mobil görünüm iyileştirmeleri */
 @media screen and (max-width: 480px) {
     .hero-content h1 {
-        font-size: 2.5rem; /* Daha küçük ekranlara uygun başlık boyutu */
+        font-size: 2rem; /* Daha küçük ekranlara uygun başlık boyutu */
     }
     
     .hero-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .hero-content p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .hero-buttons {
         flex-direction: column;
         gap: 0.8rem;
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
         margin: 0 auto;
     }
     
     .hero-buttons .btn {
         width: 100%;
         text-align: center;
+        padding: 10px 20px;
+        font-size: 14px;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+        height: 3px;
     }
     
     .code-container {
         width: 100%;
         max-width: 100%;
-        padding: 1rem;
+        padding: 0.8rem;
+        font-size: 11px;
     }
     
     .project-card {
@@ -1846,10 +2023,59 @@ input:checked + .slider:before {
     
     .social-links {
         flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
     
     .hero {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    
+    /* Navbar iyileştirmeleri */
+    .mobile-menu-btn {
+        margin-right: 5px;
+    }
+    
+    .theme-switch-wrapper {
+        margin-right: 15px;
+    }
+    
+    /* Awards ve Certificate kartları */
+    .award-card, .certificate-card, .project-card {
+        padding: 1.2rem;
+    }
+    
+    .award-medal {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Mobil menü kapanma problemi için */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Footer düzenleme */
+    .footer {
+        padding: 1.5rem 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Modal düzenlemeleri */
+    .modal-content {
+        margin: 20px auto;
+        padding: 1.2rem;
+    }
+    
+    .close-modal {
+        top: 10px;
+        right: 10px;
     }
 }

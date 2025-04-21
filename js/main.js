@@ -75,29 +75,50 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.addEventListener('click', function() {
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
+            
+            // Menü açıkken body scroll'unu kapat
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
         });
     }
+    
+    // Menü linklerine tıklandığında menüyü kapat
+    const menuLinks = document.querySelectorAll('.nav-links a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
 
     // Bağlantılar için smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
-            // Mobil menüyü kapat
-            if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
 
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                // Mobil cihazlarda farklı offset kullan
+                const headerOffset = window.innerWidth <= 768 ? 60 : 70;
+                
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Header height offset
+                    top: targetElement.offsetTop - headerOffset,
                     behavior: 'smooth'
                 });
             }
+            
+            // Menü zıplamasını önlemek için kısa gecikme ekle
+            setTimeout(() => {
+                document.body.style.overflow = 'auto';
+            }, 100);
         });
     });
 
