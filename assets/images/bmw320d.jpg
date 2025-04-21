@@ -1,0 +1,40 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1A237E"/>
+  
+  <!-- Random Forest visual representation -->
+  <g transform="translate(100, 50)">
+    <!-- Trees -->
+    <rect x="20" y="150" width="40" height="150" fill="#795548"/>
+    <circle cx="40" cy="140" r="60" fill="#4CAF50"/>
+    
+    <rect x="120" y="150" width="40" height="150" fill="#795548"/>
+    <circle cx="140" cy="140" r="60" fill="#4CAF50"/>
+    
+    <rect x="220" y="150" width="40" height="150" fill="#795548"/>
+    <circle cx="240" cy="140" r="60" fill="#4CAF50"/>
+  </g>
+  
+  <!-- BMW Logo -->
+  <g transform="translate(580, 50)">
+    <circle cx="0" cy="0" r="60" fill="#0066b1"/>
+    <circle cx="0" cy="0" r="30" fill="white"/>
+    <path d="M-30,0 L30,0" stroke="#0066b1" stroke-width="4"/>
+    <path d="M0,-30 L0,30" stroke="#0066b1" stroke-width="4"/>
+  </g>
+  
+  <!-- Chart -->
+  <g transform="translate(450, 250)">
+    <rect x="0" y="30" width="40" height="120" fill="#2196F3"/>
+    <rect x="60" y="60" width="40" height="90" fill="#F44336"/>
+    <rect x="120" y="50" width="40" height="100" fill="#4CAF50"/>
+    <rect x="180" y="70" width="40" height="80" fill="#FFC107"/>
+    <rect x="240" y="40" width="40" height="110" fill="#9C27B0"/>
+    
+    <text x="140" y="190" font-family="Arial, sans-serif" font-size="16" fill="#FFF" text-anchor="middle">Price Prediction Model</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="430" font-family="Arial, sans-serif" font-size="36" fill="#FFF" text-anchor="middle">BMW 3.20D Fiyat Tahmin Modeli</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="24" fill="#B3E5FC" text-anchor="middle">Borusan Autohack 3.lük</text>
+</svg>

@@ -422,6 +422,51 @@ function setupProjectModals() {
                         </ul>
                     `;
                     break;
+                    
+                case 'bmw320d':
+                    content = `
+                        <h2>BMW 3.20D Fiyat Tahmin Modeli</h2>
+                        <div class="modal-image">
+                            <img src="assets/images/bmw320d.jpg" alt="BMW 3.20D Fiyat Tahmin Modeli" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
+                        <p>Borusan Autohack yarışmasında Üçüncü olan bu projede, Sahibinden.com üzerinden topladığımız BMW 3.20D comfort paket ilanlarından aldığımız veriler ile hazırladığımız dataset üzerinden bir model eğittik.</p>
+                        
+                        <h3>Proje Detayları</h3>
+                        <p>Bu projede kullanılan temel teknolojiler ve yöntemler:</p>
+                        <ul>
+                            <li>Random Forest algoritması (en yüksek doğruluğu veren algoritma)</li>
+                            <li>SVM (Support Vector Machine)</li>
+                            <li>Polinomiyal ve Lineer Regresyon</li>
+                            <li>K-En Yakın Komşu (KNN) yöntemi</li>
+                            <li>Web scraping ile veri toplama</li>
+                            <li>Veri temizleme ve ön işleme</li>
+                        </ul>
+                        
+                        <h3>Buluşlarımız</h3>
+                        <ul>
+                            <li>Aracın fiyatına etki eden en önemli faktörler: Konum, değişen/boyalı parçalar, hasar kaydı</li>
+                            <li>Batı şehirlerinde (İstanbul, İzmir, Edirne) araç fiyatları daha yüksek</li>
+                            <li>Doğuya gidildikçe araç fiyatlarında düşüş gözlemlendi</li>
+                            <li>Random Forest algoritması en doğru sonuçları verdi</li>
+                        </ul>
+                        
+                        <h3>Benim Rolüm</h3>
+                        <p>Bu projede temel olarak aşağıdaki alanlarda çalıştım:</p>
+                        <ul>
+                            <li>Web scraping ile veri madenciliği</li>
+                            <li>Veri temizleme ve ön işleme</li>
+                            <li>Makine öğrenmesi modellerinin geliştirilmesi</li>
+                            <li>Farklı algoritmalarda performans karşılaştırma</li>
+                            <li>Sonuçların analizi ve görselleştirilmesi</li>
+                        </ul>
+                        
+                        <h3>Proje Linkleri</h3>
+                        <ul>
+                            <li><a href="https://github.com/fuchstech/Borusan_autohack_bmw320prediction_model" target="_blank">GitHub Reposu</a></li>
+                            <li><a href="https://www.canva.com/design/DAGXfUNa6Hs/KYzuO4uwgD35DdxvT8NlVw/edit" target="_blank">Yarışma Sunumu</a></li>
+                        </ul>
+                    `;
+                    break;
                 default:
                     content = '<p>Proje detayları mevcut değil.</p>';
             }
