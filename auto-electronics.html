@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+    <title>Oto-Elektronik Deneyimi | Kerem Yıldız</title>
+    <meta name="description" content="Kerem Yıldız'ın oto-elektronik alanındaki deneyimleri, projeleri ve becerileri. Otomobil elektronik arıza tespiti, ECU programlama ve araç yazılımı geliştirme alanlarındaki çalışmalar.">
+    
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS - Animasyon Kütüphanesi -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <style>
+        /* Özel sayfa stilleri */
+        .auto-electronics-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/borusan.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 120px 0 80px;
+            margin-bottom: 60px;
+        }
+        
+        .auto-electronics-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .auto-electronics-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .expertise-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .expertise-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .expertise-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .expertise-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--heading-color);
+        }
+        
+        .expertise-description {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .project-gallery {
+            margin-bottom: 60px;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 16/9;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .tools-section {
+            margin-bottom: 60px;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .tool-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .tool-name {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+        
+        .faq-section {
+            margin-bottom: 60px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .faq-question {
+            background-color: var(--card-bg);
+            padding: 20px;
+            font-weight: 600;
+            color: var(--heading-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:after {
+            content: '\f078';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question:after {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            background-color: var(--bg-color-secondary);
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .contact-cta {
+            background-color: var(--accent-color);
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .auto-electronics-header {
+                padding: 80px 0 50px;
+            }
+            
+            .auto-electronics-header h1 {
+                font-size: 2rem;
+            }
+            
+            .expertise-areas, .gallery-container, .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigasyon -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">@fuchstech</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="index.html#about">Hakkımda</a></li>
+                    <li><a href="index.html#skills">Yetenekler</a></li>
+                    <li><a href="index.html#projects">Projeler</a></li>
+                    <li><a href="index.html#experience">Deneyim</a></li>
+                    <li><a href="index.html#awards">Ödüller</a></li>
+                    <li><a href="index.html#certificates">Sertifikalar</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">İletişim</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </label>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Oto-Elektronik Ana Başlık -->
+    <section class="auto-electronics-header">
+        <div class="container">
+            <h1>Oto-Elektronik Deneyimim</h1>
+            <p>Otomobil elektronik sistemleri, arıza teşhisi, ECU programlama ve araç yazılımı geliştirme alanlarındaki uzmanlığım ve deneyimlerim.</p>
+        </div>
+    </section>
+
+    <!-- Ana İçerik -->
+    <main>
+        <div class="container">
+            <!-- Deneyim Özeti -->
+            <section class="summary-section" data-aos="fade-up">
+                <h2 class="section-title">Oto-Elektronik Alanındaki Deneyimim</h2>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>2023-2024 yılları arasında Gocen Oto Elektronik'te Elektronik Teknisyeni olarak çalıştım. Bu süreçte, modern araçların elektronik sistemleri, ECU (Motor Kontrol Ünitesi) diagnostiği ve programlaması, arıza teşhisi ve elektronik komponent onarımı konularında deneyim kazandım.</p>
+                        <p>Otomobil yazılımları geliştirme sürecinde, araç sensör verilerinin analizi, ECU haritalarının iyileştirilmesi ve performans optimizasyonu üzerinde çalıştım. Çeşitli marka ve modellerde (özellikle Avrupa ve Uzak Doğu menşeili otomobiller) arıza teşhisi yapma ve çözüm üretme konusunda uzmanlaştım.</p>
+                        <p>Edindiğim bu deneyim, elektronik devre analizi, gömülü sistemler ve otomotiv yazılımları alanlarında güçlü bir teknik altyapı oluşturmama katkı sağladı.</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="assets/images/borusan.jpg" alt="Oto-Elektronik Çalışma" data-aos="zoom-in">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Uzmanlık Alanları -->
+            <section class="expertise-section" data-aos="fade-up">
+                <h2 class="section-title">Uzmanlık Alanları</h2>
+                <div class="expertise-areas">
+                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="expertise-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="expertise-title">ECU Diagnostik ve Programlama</h3>
+                        <p class="expertise-description">Motor kontrol ünitelerinin (ECU) arıza tespiti, onarımı ve yeniden programlaması. Chip tuning ve performans optimizasyonu yapma becerileri.</p>
+                    </div>
+                    
+                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="expertise-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="expertise-title">Elektronik Arıza Teşhisi</h3>
+                        <p class="expertise-description">Otomobil elektronik sistemlerindeki arızaların teşhisi, devre analizi ve elektronik komponenetlerin onarımı veya değişimi.</p>
+                    </div>
+                    
+                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="expertise-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="expertise-title">Otomobil Yazılımı Geliştirme</h3>
+                        <p class="expertise-description">Araç performans ve yakıt optimizasyonu için ECU yazılımlarının geliştirilmesi. Özel kullanım senaryolarına göre yazılım adaptasyonu.</p>
+                    </div>
+                    
+                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="expertise-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="expertise-title">CAN-BUS Sistemleri</h3>
+                        <p class="expertise-description">Araç içi haberleşme ağlarının (CAN-BUS) analizi, arıza tespiti ve modifikasyonu. Çeşitli elektronik modüller arasındaki iletişim sorunlarının çözümü.</p>
+                    </div>
+                    
+                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="expertise-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <h3 class="expertise-title">Sensör Kalibrasyonu</h3>
+                        <p class="expertise-description">Motor, şanzıman ve şasi sensörlerinin kalibrasyonu, değişimi ve arıza tespiti. Sensör verilerinin analizi ve optimizasyonu.</p>
+                    </div>
+                    
+                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="expertise-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="expertise-title">Komfort Sistemleri</h3>
+                        <p class="expertise-description">Araç konfor sistemleri (klima, merkezi kilit, cam, far, multimedya sistemleri) arıza tespiti ve onarımı. Modifikasyon ve geliştirme projeleri.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Proje Galerisi -->
+            <section class="project-gallery" data-aos="fade-up">
+                <h2 class="section-title">Oto-Elektronik Projelerim</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="assets/images/borusan.jpg" alt="ECU Onarımı">
+                        <div class="gallery-caption">ECU Arıza Teşhisi ve Onarımı</div>
+                    </div>
+                    
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="assets/images/borusan.jpg" alt="Arıza Teşhisi">
+                        <div class="gallery-caption">Araç Elektronik Sistemleri Arıza Teşhisi</div>
+                    </div>
+                    
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="assets/images/borusan.jpg" alt="ECU Programlama">
+                        <div class="gallery-caption">ECU Programlama ve Optimizasyon</div>
+                    </div>
+                    
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="assets/images/borusan.jpg" alt="Sensör Onarımı">
+                        <div class="gallery-caption">Araç Sensör Sistemleri Onarımı</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kullanılan Araçlar -->
+            <section class="tools-section" data-aos="fade-up">
+                <h2 class="section-title">Kullandığım Cihazlar ve Araçlar</h2>
+                <div class="tools-grid">
+                    <div class="tool-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tool-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="tool-name">OBD Tarayıcılar</div>
+                    </div>
+                    
+                    <div class="tool-item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="tool-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <div class="tool-name">Osiloskop</div>
+                    </div>
+                    
+                    <div class="tool-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tool-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="tool-name">ECU Programlayıcı</div>
+                    </div>
+                    
+                    <div class="tool-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="tool-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="tool-name">Diagnostik Tabletler</div>
+                    </div>
+                    
+                    <div class="tool-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="tool-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="tool-name">Lehimleme Ekipmanları</div>
+                    </div>
+                    
+                    <div class="tool-item" data-aos="fade-up" data-aos-delay="350">
+                        <div class="tool-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="tool-name">CAN Analizörü</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sık Sorulan Sorular -->
+            <section class="faq-section" data-aos="fade-up">
+                <h2 class="section-title">Sık Sorulan Sorular</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">ECU tuning nedir ve ne işe yarar?</div>
+                        <div class="faq-answer">
+                            <p>ECU (Engine Control Unit - Motor Kontrol Ünitesi) tuning, aracın motor performansını ve verimliliğini optimize etmek için elektronik kontrol ünitesinin yazılımının yeniden programlanmasıdır. Bu işlem, motor gücünü artırabilir, yakıt ekonomisini iyileştirebilir ve sürüş deneyimini geliştirebilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Arızalı bir ECU her zaman onarılabilir mi?</div>
+                        <div class="faq-answer">
+                            <p>ECU'ların çoğu onarılabilir, ancak bu hasar derecesine ve türüne bağlıdır. Elektronik bileşenlerde fiziksel hasar, su hasarı veya yüksek voltaj hasarı gibi durumlarda onarım zor olabilir. Her durumda, profesyonel bir teşhis yapılması önemlidir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Araç elektriğinde en sık karşılaşılan sorunlar nelerdir?</div>
+                        <div class="faq-answer">
+                            <p>Araç elektriğinde sıklıkla karşılaşılan sorunlar arasında akü problemleri, alternatör arızaları, kablo bağlantı sorunları, sigorta arızaları, sensör hataları ve ECU iletişim sorunları yer alır. Modern araçlarda CAN-BUS iletişim hataları da yaygındır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">OBD tarayıcı ne işe yarar?</div>
+                        <div class="faq-answer">
+                            <p>OBD (On-Board Diagnostics) tarayıcılar, aracın bilgisayar sistemine bağlanarak arıza kodlarını okumaya, gerçek zamanlı verileri izlemeye ve bazı ayarları değiştirmeye olanak tanıyan cihazlardır. Araç sorunlarının hızlı tespiti için oldukça değerlidir.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- İletişim CTA -->
+            <section class="contact-cta" data-aos="fade-up">
+                <h2>Oto-Elektronik ve Yazılım Projeleriniz için İletişime Geçin</h2>
+                <p>Araç elektronik sistemleri, ECU programlama, performans iyileştirmeleri veya özel projeleriniz için profesyonel destek sunuyorum. Deneyimim ve bilgi birikimimle projelerinize değer katmaktan memnuniyet duyarım.</p>
+                <a href="index.html#contact" class="btn btn-primary">İletişime Geç</a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kerem Yıldız. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Yukarı Çık Butonu -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JS Kütüphaneleri -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Ana JS Dosyaları -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // FAQ toggle işlevselliği
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Diğer tüm açık SSS'leri kapat
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Bu SSS'i aç/kapat
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // AOS başlatma
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Tema kontrol
+            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+            const currentTheme = localStorage.getItem('theme');
+            
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+                
+                if (currentTheme === 'dark') {
+                    toggleSwitch.checked = true;
+                }
+            }
+            
+            toggleSwitch.addEventListener('change', function(e) {
+                if (e.target.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

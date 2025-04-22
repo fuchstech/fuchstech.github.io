@@ -246,6 +246,38 @@ function setupProjectModals() {
             let content = '';
             
             switch(projectId) {
+                case 'autoelectronics':
+                    content = `
+                        <h2>Oto-Elektronik & ECU Programlama</h2>
+                        <div class="modal-image">
+                            <img src="assets/images/borusan.jpg" alt="Oto-Elektronik Projesi" style="width:100%; height:200px; object-fit:cover;">
+                        </div>
+                        <p>Otomobil elektronik sistemleri, ECU arıza tespiti, programlama ve araç yazılımı geliştirme alanlarındaki deneyimlerim.</p>
+                        
+                        <h3>Proje Detayları</h3>
+                        <p>Oto-elektronik alanında yaptığım çalışmalar:</p>
+                        <ul>
+                            <li>ECU (Motor Kontrol Ünitesi) arıza tespiti ve onarımı</li>
+                            <li>Çeşitli araç elektronik sistemlerinin diagnostiği</li>
+                            <li>Performans ve yakıt optimizasyonu için ECU programlama</li>
+                            <li>Araç sensör sistemleri kalibrasyonu ve onarımı</li>
+                        </ul>
+                        
+                        <h3>Benim Rolüm</h3>
+                        <p>Gocen Oto Elektronik'te Elektronik Teknisyeni olarak görev aldım. Sorumluluklarım:</p>
+                        <ul>
+                            <li>Arıza tespiti ve elektronik sistem analizi</li>
+                            <li>Yazılım güncellemeleri ve programlama</li>
+                            <li>Sorun giderme ve müşteri çözümleri</li>
+                            <li>Elektronik komponentlerin onarımı</li>
+                        </ul>
+                        
+                        <div class="modal-cta">
+                            <a href="auto-electronics.html" class="btn btn-primary">Detaylı Sayfaya Git</a>
+                        </div>
+                    `;
+                    break;
+                
                 case 'asifin':
                     content = `
                         <h2>AsiFin - Finansal Strateji Platformu</h2>
