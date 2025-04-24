@@ -99,7 +99,7 @@
 
 /* Blog Bölümü */
 .blog {
-    background-color: var(--background-light);
+    background-color: #f0f0f2;
 }
 
 .blog-description {
@@ -530,7 +530,7 @@ body {
     overflow-x: hidden; /* Yatay kaydırmayı engelleme */
 }
 .certificates {
-    background-color: var(--background-light);
+    background-color: #f9f9f9;
 }
 
 .certificates-grid {
@@ -631,12 +631,12 @@ body {
     /* Ana Renkler */
     --primary-color: #3498db;
     --secondary-color: #ff8080;
-    --background-light: #fafbfc; /* Daha da açık arka plan */
+    --background-light: #f5f5f7; /* Daha gri-beyaz bir ton */
     --background-dark: #121212;
-    --text-dark: #1f2937;
+    --text-dark: #333333;
     --text-light: #f8fafc;
-    --text-gray: #64748b;
-    --border-color: #edf2f7;
+    --text-gray: #717171;
+    --border-color: #e5e5e7;
     
     /* Geçiş Süresi */
     --transition: 0.3s ease-in-out;
@@ -736,15 +736,15 @@ section {
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.02);
+    background-color: rgba(245, 245, 247, 0.98);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
     z-index: var(--z-navbar);
     transition: var(--transition);
 }
 
 .header.scrolled {
     padding: 0.7rem 0;
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: rgba(245, 245, 247, 0.98);
 }
 
 .header .container {
@@ -907,7 +907,7 @@ input:checked + .slider:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.85); /* Daha fazla saydam beyaz overlay */
+    background-color: rgba(245, 245, 247, 0.85); /* Daha gri-beyaz bir overlay */
     z-index: 1;
 }
 
@@ -1106,7 +1106,7 @@ input:checked + .slider:before {
 
 .skill-bar {
     height: 10px;
-    background-color: #f3f4f6;
+    background-color: #e5e5e7;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -1135,7 +1135,7 @@ input:checked + .slider:before {
 
 /* Projeler Bölümü */
 .projects {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
 }
 
 .project-filters {
@@ -1150,7 +1150,7 @@ input:checked + .slider:before {
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
     font-weight: 500;
-    background-color: #f9fafb;
+    background-color: #eeeeee;
     color: var(--text-dark);
     transition: var(--transition);
 }
@@ -1230,7 +1230,7 @@ input:checked + .slider:before {
 }
 
 .tech-tag {
-    background: #eff6ff;
+    background: #e8e8e8;
     color: var(--primary-color);
     padding: 0.3rem 0.8rem;
     border-radius: 30px;
@@ -1426,7 +1426,7 @@ input:checked + .slider:before {
 
 /* Ödüller ve Başarılar Bölümü */
 .awards {
-    background-color: #ffffff;
+    background-color: #f5f5f7;
 }
 
 .awards-grid {
@@ -1436,7 +1436,7 @@ input:checked + .slider:before {
 }
 
 .award-card {
-    background-color: #fefefe;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     overflow: hidden;
@@ -1971,7 +1971,7 @@ input:checked + .slider:before {
 
 /* Blog Bölümü */
 .blog {
-    background-color: var(--background-light);
+    background-color: #f0f0f2;
 }
 
 .blog-description {
