@@ -471,26 +471,7 @@
     <script src="js/main.js"></script>
     
     <script>
-        // FAQ toggle işlevselliği
         document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                
-                question.addEventListener('click', function() {
-                    // Diğer tüm açık SSS'leri kapat
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Bu SSS'i aç/kapat
-                    item.classList.toggle('active');
-                });
-            });
-            
             // AOS başlatma
             AOS.init({
                 duration: 800,
